@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Behave Debug",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "behave",
+       "args": [
+        "-f", "allure_behave.formatter:AllureFormatter",
+        "-o", "reports/allure-results",
+        "--no-capture",
+        "--no-capture-stderr"
+      ],
+      "console": "integratedTerminal",
+      "justMyCode": false
+    }
+  ]
+}
