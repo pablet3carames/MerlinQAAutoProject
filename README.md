@@ -19,3 +19,19 @@ En un entorno real, esta automatización se reemplazaría por:
     Uso de un buscador interno controlado por la empresa
 
 “Para garantizar estabilidad, la automatización comienza directamente en Wikipedia, ya que el objetivo real del test es validar la extracción de información y no el buscador de Google.”
+
+# Instalar dependencias
+pip install -r requirements.txt
+
+# Ejecutar todas las pruebas
+behave
+
+# Ejecutar un feature específico
+behave features/petstore_api.feature
+
+# Ejecutar con más verbosidad
+behave -v
+
+# Ejecutar y generar reporte Allure (opcional)
+behave -f allure_behave.formatter:AllureFormatter -o allure-results
+allure serve allure-results
